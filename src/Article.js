@@ -3,7 +3,8 @@ import React, {Component} from 'react'; // 2
 
 export default class Article extends Component {
     // props - приходит от родителя
-    // state - то на что мы можем влиять
+    // state - то на что мы можем влиять, 
+    //         то что меняется в течение жизни компонента
     constructor(props) {
         super(props);
 
@@ -18,7 +19,9 @@ export default class Article extends Component {
         return (
             <div>
                 <h3>{article.title}</h3>
-                <button onClick = {this.toggleOpen}>open</button> 
+                <button onClick = {this.toggleOpen}>
+                    {isOpen ? 'close' : 'open'}
+                </button> 
                 {this.getBody()}
             </div>
         )    

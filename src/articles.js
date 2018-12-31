@@ -8,5 +8,10 @@ export const articles = [
         "id": "2",
         "title": "Second article",
         "text": "My name is Andrey"
+    },
+    {
+        "id": "3",
+        "title": "Books",
+        "text": "Harry Potter"
     }
 ];
