@@ -1,5 +1,6 @@
 import React, {Component} from 'react'; // 2
 // import React from 'react'; // 1
+import CommentList from './CommentList'
 
 export default class Article extends Component {
     // props - приходит от родителя
@@ -30,7 +31,12 @@ export default class Article extends Component {
     getBody() {
         if (!this.state.isOpen) return null
         const {article} = this.props
-        return <p>{article.text}</p>
+        return (
+            <section>
+               {article.text}
+               <CommentList comments = {article.comments}/>
+            </section>
+        )
     }
 
     toggleOpen = () => {
